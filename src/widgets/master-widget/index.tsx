@@ -187,7 +187,7 @@ namespace FBLWidgetReact {
         buttons: [Dialog.cancelButton(), Dialog.warnButton({ label: 'CLOSE' })]
       }).then(result => {
         if (result.button.accept) {
-          props.tracker.forEach((panel) => {
+          props.tracker.forEach(panel => {
             panel.content.dispose();
             panel.dispose();
           });

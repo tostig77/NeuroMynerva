@@ -1198,8 +1198,8 @@ fbl.check_NeuroMynerva_version()
       model: model,
       rendermime: rendermime,
       contentFactory: new CodeCell.ContentFactory({
-        editorFactory: (options) => new CodeMirrorEditor(options),
-      }),
+        editorFactory: options => new CodeMirrorEditor(options),
+      })
     });
     widget.readOnly = true;
     widget.initializeState();
