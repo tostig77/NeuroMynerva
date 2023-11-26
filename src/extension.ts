@@ -19,7 +19,8 @@ import {
   Dialog,
   SessionContext
 } from '@jupyterlab/apputils';
-import { Kernel, Session } from '@jupyterlab/services';
+import { Kernel, Session, SessionManager } from '@jupyterlab/services';
+import { CodeMirrorEditor } from '@jupyterlab/codemirror';
 import { LabIcon } from '@jupyterlab/ui-components';
 import { Widget } from '@lumino/widgets';
 import { INotification } from 'jupyterlab_toastify';
@@ -362,7 +363,7 @@ async function activateFBL(
 
       if (masterWidget === undefined) {
         masterWidget = new MasterWidget(
-          app.serviceManager.sessions,
+          app.serviceManager.sessions as SessionManager,
           labShell,
           fblWidgetTrackers,
           ffboProcessorSetting,
@@ -1190,11 +1191,15 @@ fbl.check_NeuroMynerva_version()
 
     await sessionContext.initialize();
     const model = new CodeCellModel({});
-    model.value.text = code;
+    //(model as any).value().text = code;
+    model.sharedModel.setSource(code);
     const rendermime = new RenderMimeRegistry({ initialFactories });
     const widget = new CodeCell({
       model: model,
-      rendermime: rendermime
+      rendermime: rendermime,
+      contentFactory: new CodeCell.ContentFactory({
+        editorFactory: (options) => new CodeMirrorEditor(options),
+      }),
     });
     widget.readOnly = true;
     widget.initializeState();

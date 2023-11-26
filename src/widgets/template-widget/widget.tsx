@@ -15,7 +15,7 @@ import {
 import {
   ISessionContext,
   SessionContext,
-  sessionContextDialogs,
+  SessionContextDialogs,
   showDialog,
   ToolbarButton
 } from '@jupyterlab/apputils';
@@ -173,10 +173,11 @@ export class FBLWidget extends Widget implements IFBLWidget {
     // specify id
     let id = options.id ?? `${this.name}-${UUID.uuid4()}`;
     // make sure there is no conflic with existing widgets
-    const _widgets_iter = app.shell.widgets('main').iter();
+    const _widgets_iter = app.shell.widgets('main');
+
     let _w = _widgets_iter.next();
-    while (_w) {
-      if (_w.id === id || (_w as any).content?.id === id) {
+    while (_w.value !== undefined) {
+      if (_w.value.node.id === id || (_w as any).content?.id === id) {
         id = `${this.name}-${UUID.uuid4()}`;
         break;
       }
@@ -219,6 +220,8 @@ export class FBLWidget extends Widget implements IFBLWidget {
     toolbar.node.style.height = 'var(--jp-private-toolbar-height)';
     toolbar.node.classList.add('fbl-widget-toolbar');
     this.populateToolBar();
+
+    const sessionContextDialogs = new SessionContextDialogs();
 
     // initialize session
     this.sessionContext.initialize().then(async value => {
@@ -380,15 +383,16 @@ export class FBLWidget extends Widget implements IFBLWidget {
       }
       case 'toast': {
         for (const [type, data] of Object.entries(thisMsg.data.info)) {
+          const dataNode = data as React.ReactNode;
           switch (type) {
             case 'success':
-              INotification.success(data, { autoClose: 1500 });
+              INotification.success(dataNode, { autoClose: 1500 });
               break;
             case 'error':
-              INotification.error(data, { autoClose: 5000 });
+              INotification.error(dataNode, { autoClose: 5000 });
               break;
             default:
-              INotification.info(data, { autoClose: 2000 });
+              INotification.info(dataNode, { autoClose: 2000 });
               break;
           }
         }

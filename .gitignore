@@ -1,23 +1,19 @@
-.DS_Store
-packages/*/build/bundle.js
-node_modules
-lib/
-tsconfig.tsbuildinfo
-*.ipynb
-.vscode
-.ipynb_checkpoints
-__pycache__/
-labextension/
-*.egg-info
-yarn-error.log
-
 *.bundle.*
 lib/
 node_modules/
+*.log
+.eslintcache
+.stylelintcache
 *.egg-info/
 .ipynb_checkpoints
 *.tsbuildinfo
 neuromynerva/labextension
+# Version file is handled by hatchling
+neuromynerva/_version.py
+
+# Integration tests
+ui-tests/test-results/
+ui-tests/playwright-report/
 
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python
@@ -69,6 +65,7 @@ htmlcov/
 .coverage.*
 .cache
 nosetests.xml
+coverage/
 coverage.xml
 *.cover
 .hypothesis/
@@ -123,3 +120,6 @@ dmypy.json
 
 # OSX files
 .DS_Store
+
+# Yarn cache
+.yarn/

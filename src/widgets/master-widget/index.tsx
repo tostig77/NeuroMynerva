@@ -24,7 +24,7 @@ import {
   FBLPanel,
   FBLTracker,
   FBLWidgetTrackers
-} from '../../index';
+} from '../../extension';
 import { FFBOProcessorButton } from '../../ffboprocessor';
 import '../../../style/master-widget/master.css';
 import { SessionManager } from '@jupyterlab/services';
@@ -187,7 +187,7 @@ namespace FBLWidgetReact {
         buttons: [Dialog.cancelButton(), Dialog.warnButton({ label: 'CLOSE' })]
       }).then(result => {
         if (result.button.accept) {
-          props.tracker.forEach(panel => {
+          props.tracker.forEach((panel) => {
             panel.content.dispose();
             panel.dispose();
           });

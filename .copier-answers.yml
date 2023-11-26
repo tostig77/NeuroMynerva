@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.2.3
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: tl2747@columbia.edu
+author_name: FlyBrainLab Dev Team
+has_binder: false
+has_settings: true
+kind: frontend
+labextension_name: '@flybrainlab/neuromynerva'
+project_short_description: ' NeuroMynerva extension for FlyBrainLab'
+python_name: neuromynerva
+repository: https://github.com/FlyBrainLab/NeuroMynerva.git
+test: true
+

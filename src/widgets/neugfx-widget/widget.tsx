@@ -12,7 +12,7 @@ import {
 import { LabIcon } from '@jupyterlab/ui-components';
 import { NeuGFXModel, INeuGFXModel } from './model';
 import { IFBLWidget, FBLWidget } from '../template-widget/index';
-import { Icons } from '../../index';
+import * as Icons from '../../icons';
 import '../../../style/neugfx-widget/neugfx.css';
 import { FFBOProcessor } from '../../ffboprocessor';
 import { Widget } from '@lumino/widgets';
