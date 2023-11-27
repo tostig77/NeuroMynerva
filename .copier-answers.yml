@@ -11,4 +11,3 @@ project_short_description: ' NeuroMynerva extension for FlyBrainLab'
 python_name: neuromynerva
 repository: https://github.com/FlyBrainLab/NeuroMynerva.git
 test: true
-

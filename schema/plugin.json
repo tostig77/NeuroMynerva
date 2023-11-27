@@ -36,7 +36,7 @@
               "type": "string"
             }
           },
-          "required":["ssl", "authentication"],
+          "required": ["ssl", "authentication"],
           "type": "object"
         },
         "USER": {
@@ -48,7 +48,7 @@
               "type": "string"
             }
           },
-          "required":["user", "secret"],
+          "required": ["user", "secret"],
           "type": "object"
         },
         "SERVER": {
@@ -68,7 +68,7 @@
               "type": "string"
             }
           },
-          "required":["IP", "dataset", "realm"],
+          "required": ["IP", "dataset", "realm"],
           "type": "object"
         },
         "DEBUG": {
@@ -94,31 +94,31 @@
                 "adult(OpticLobe)"
               ]
             },
-            "neu3dSettings" :{
+            "neu3dSettings": {
               "type": "object",
               "properties": {
-                "resetPosition":{
+                "resetPosition": {
                   "type": "object",
-                  "properties":{
-                    "x": {"type": "number"},
-                    "y": {"type": "number"},
-                    "z": {"type": "number"}
+                  "properties": {
+                    "x": { "type": "number" },
+                    "y": { "type": "number" },
+                    "z": { "type": "number" }
                   }
                 },
-                "upVector":{
+                "upVector": {
                   "type": "object",
-                  "properties":{
-                    "x": {"type": "number"},
-                    "y": {"type": "number"},
-                    "z": {"type": "number"}
+                  "properties": {
+                    "x": { "type": "number" },
+                    "y": { "type": "number" },
+                    "z": { "type": "number" }
                   }
                 },
-                "cameraTarget":{
+                "cameraTarget": {
                   "type": "object",
-                  "properties":{
-                    "x": {"type": "number"},
-                    "y": {"type": "number"},
-                    "z": {"type": "number"}
+                  "properties": {
+                    "x": { "type": "number" },
+                    "y": { "type": "number" },
+                    "z": { "type": "number" }
                   }
                 }
               }
@@ -135,14 +135,14 @@
     }
   },
   "properties": {
-    "fbl-processors":{
+    "fbl-processors": {
       "title": "FFBOProcessors",
       "description": "Enumerates all available FFBOProcessors",
       "$ref": "#/definitions/fbl-settings",
       "format": "table",
       "type": "array",
       "items": { "$ref": "#/definitions/fbl-config" },
-      "default":[
+      "default": [
         {
           "NAME": "adult(flycircuit)",
           "AUTH": {
@@ -209,7 +209,7 @@
               },
               "upVector": {
                 "x": -0.00203,
-                "y": -0.500,
+                "y": -0.5,
                 "z": -0.8658
               },
               "cameraTarget": {
@@ -244,14 +244,14 @@
             "preset": "larva(l1em)",
             "neu3dSettings": {
               "resetPosition": {
-                "x":  42.05716,
-                "y":  18.46588,
-                "z":  -509.65272
+                "x": 42.05716,
+                "y": 18.46588,
+                "z": -509.65272
               },
               "upVector": {
                 "x": 0.00226,
                 "y": -0.9592,
-                "z": 0.28260
+                "z": 0.2826
               },
               "cameraTarget": {
                 "x": 42.113,
@@ -331,9 +331,9 @@
                 "z": 1340.8
               },
               "upVector": {
-                "x": 0.4230,
-                "y": -0.8500,
-                "z": 0.1780
+                "x": 0.423,
+                "y": -0.85,
+                "z": 0.178
               },
               "cameraTarget": {
                 "x": 177.593,
@@ -367,14 +367,14 @@
             "preset": "adult(FlyWire)",
             "neu3dSettings": {
               "resetPosition": {
-                "x":439.05,
-                "y":250.04,
-                "z":-1214.848
+                "x": 439.05,
+                "y": 250.04,
+                "z": -1214.848
               },
               "upVector": {
-                "x":-0.0554,
-                "y":-0.3314,
-                "z":-0.7209
+                "x": -0.0554,
+                "y": -0.3314,
+                "z": -0.7209
               },
               "cameraTarget": {
                 "x": 499.24,

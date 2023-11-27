@@ -1,10 +1,10 @@
 .fbl-json-editor-datasets h3 {
-    font-size: var(--jp-ui-font-size1);
-    margin-bottom: 0;
+  font-size: var(--jp-ui-font-size1);
+  margin-bottom: 0;
 }
 
 .fbl-json-editor-datasets .je-indented-panel {
-    font-size: var(--jp-ui-font-size1);
-    margin-bottom: 0;
-    padding: 0px;
+  font-size: var(--jp-ui-font-size1);
+  margin-bottom: 0;
+  padding: 0px;
 }
