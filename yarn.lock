@@ -8261,9 +8261,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"neu3d@portal:/Users/me/fbl/neu3d::locator=%40flybrainlab%2Fneuromynerva%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "neu3d@portal:/Users/me/fbl/neu3d::locator=%40flybrainlab%2Fneuromynerva%40workspace%3A."
+"neu3d@npm:~1.1.4":
+  version: 1.1.4
+  resolution: "neu3d@npm:1.1.4"
   dependencies:
     "@fortawesome/fontawesome-free": ^5.15.4
     bootstrap: ^5.2.3
@@ -8274,8 +8274,9 @@ __metadata:
     lodash: ^4.17.21
     stats.js: ^0.17.0
     three: ^0.151.3
+  checksum: 003f49c95b1d5a9c152af93d0baeb309869733afcfad776061dde020187f8fade4dc0eab0ed81ace007da1d814c6782f18e7b86f85a5bea77ea7209c4466fb41
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "nice-try@npm:^1.0.4":
   version: 1.0.5
