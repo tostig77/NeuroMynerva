@@ -13,6 +13,18 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+
+    - name: Corepack
+      run: |
+        npm uninstall -g yarn pnpm
+        npm install -g corepack
+        corepack enable
+        corepack install -g yarn@3.5.0
+
     - name: Base Setup
       uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 
